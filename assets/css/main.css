@@ -57,6 +57,10 @@ body {
   font-family: var(--default-font);
 }
 
+.para {
+  text-align: justify;
+}
+
 a {
   color: var(--accent-color);
   text-decoration: none;
@@ -80,10 +84,10 @@ h6 {
 
 /* PHP Email Form Messages
 ------------------------------*/
-.php-email-form {
+/* .php-email-form {
   background-color: #adb5bd7a !important;
   border-radius: 15px;
-}
+} */
 
 .php-email-form .error-message {
   display: none;
@@ -945,10 +949,40 @@ section,
 }
 
 .contact .php-email-form {
-  background-color: var(--surface-color);
-  height: 100%;
-  padding: 30px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+.contact .form-control {
+  height: 55px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: #f8f9fa;
+  transition: 0.3s;
+}
+
+.contact .form-control:focus {
+  border-color: #149ddd;
+  box-shadow: 0 0 15px rgba(20, 157, 221, 0.2);
+}
+.contact textarea.form-control {
+  height: 150px;
+}
+
+.contact .php-email-form button {
+  background: #149ddd;
+  color: #fff;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.contact.php-email-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(20, 157, 221, 0.35);
 }
 
 @media (max-width: 575px) {
@@ -993,7 +1027,19 @@ section,
 .contact .php-email-form button[type="submit"]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
+.contact-img {
+  animation: zoom 2.5s infinite;
+}
 
+@keyframes zoom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
@@ -1148,4 +1194,32 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/* Contact Form */
+
+.php-email-form {
+  background: #e7e7e7 !important;
+  padding: 35px !important;
+  border-radius: 20px !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1) !important;
+}
+
+.php-email-form .form-control {
+  height: 55px;
+  border-radius: 12px !important;
+  border: 1px solid #ddd !important;
+  background: #f8f9fa !important;
+}
+
+.php-email-form textarea.form-control {
+  height: 150px !important;
+}
+
+.php-email-form button {
+  background: #149ddd !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 50px !important;
+  padding: 14px 35px !important;
 }
